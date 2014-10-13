@@ -7,14 +7,12 @@ function extractFlavor(list,substring){
 	var shortlist=[];
 	
 	for(var i = 0; i<list.length; i++){
-	if(list[i].search(search) != -1){
+	if(list[i].search(substring) != -1){
 		shortlist.push(list[i]);
   }
 }
 	return shortlist;
 }
 
-extractFlavor(flavors,"e");
-extractFlavor(flavors,"an");
-extractFlavor(flavors,"x");
-
+extractFlavor(flavors,"e"); // returns ["chocolate", "vanilla", "framboise", "strawberry", "grape", "orange", "macha"]
+extractFlavor(flavors,"an"); //returns ["vanilla", "orange"]
